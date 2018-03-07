@@ -26,7 +26,7 @@ function juego(usuario1) {
         "¡Empataste 🤒!",
         "¡Ups Perdiste 😡!",
         "¡Woow Ganaste 💪!"
-    ];    
+    ];
 
     var usuario2 = Math.floor((Math.random() * 5));
     // console.log("usuario2 escogio: " + usuario2);
@@ -45,15 +45,13 @@ function juego(usuario1) {
 // console.log(-+a++-+-+b--);
 
 
-
-
-// codigo jugador vs jugador. 
+// codigo jugador vs jugador.
 
 var jugarFacetoFace = function(){
     confirm("¡Bienvenido, vamos a jugar!");
 
-    var jugador1 = prompt('Jugador 1, es tu turno de elegir: "piedra", "papel" o "tijera".');
-    var jugador2 = prompt('Jugador 2, es tu turno de elegir: "piedra", "papel" o "tijera".');
+    var jugador1 = prompt('Jugador 1, es tu turno de elegir: "piedra", "papel", "tijera", "lagarto", "spock".');
+    var jugador2 = prompt('Jugador 2, es tu turno de elegir: "piedra", "papel", "tijera", "lagarto", "spock".');
 
     if (jugador1 === jugador2) {
         confirm("Empate 🤒");
@@ -67,6 +65,9 @@ var jugarFacetoFace = function(){
     else if (jugador1 === "papel" && jugador2 === "piedra"){
         confirm("¡Gana el Jugador 1!");
     }
+    else if (jugador1 === "spock" && jugador2 === "lagarto") {
+        confirm("¡Gana el Jugador 1!");
+    }
     else {
         confirm("¡Gana el Jugador 2!");
     }
@@ -74,7 +75,7 @@ var jugarFacetoFace = function(){
         jugarFacetoFace();
     }
     else {
-        console.log("Nos veremos pronto :)");
+        console.log("Fin del juego 😡");
     }
 };
 

@@ -1,0 +1,31 @@
+
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    /* background: #ffc600; */
+    background: #BADA55;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    padding: 0;
+    margin:0;
+    font-family: 'Amatic SC', cursive;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 12rem;
+    line-height:1;
+    margin-bottom: 0;
+  }
+
+.drag{
+    background:rgba(255,255,255,0.2);
+    padding:0 3rem;
+    line-height:1;
+    border-radius:1rem;
+}

@@ -5,16 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Juego Piedra Papel o Tijeras, Lagarto, Spock</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet'>
 </head>
 <body>
-    <h1>Bienvenido al Juego...</h1>
+    <header>
+        <h1>☠️ Bienvenido al castillo <span class="drag"> 🧛 </span> Dracula..</h1>
+    </header>
 
-    <button onclick="juego(0);">Piedra</button>
+    <section>
+        <div class="md-modal md-effect-12" id="modal-12">
+            <div class="md-content">
+                <h3>Modal Dialog</h3>
+                <div>
+                    <p>This is a modal window. You can do the following things with it:</p>
+                    <ul>
+                        <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+                        <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+                        <li><strong>Close:</strong> click on the button below to close the modal.</li>
+                    </ul>
+                    <button class="md-close">Close me!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- <button onclick="juego(0);">Piedra</button>
     <button onclick="juego(1);">Papel</button>
     <button onclick="juego(2);">Tijeras</button>
     <button onclick="juego(3);">Lagarto</button>
-    <button onclick="juego(4);">Spock</button>    
-    <button onclick="jugarFacetoFace();">usuario vs usuario</button>
+    <button onclick="juego(4);">Spock</button>
+    <button onclick="jugarFacetoFace();">usuario vs usuario</button> -->
 
 
     <script src="assets/js/scripts.js"></script>

@@ -6,35 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Juego Piedra Papel o Tijeras, Lagarto, Spock</title>
     <link rel="stylesheet" href="assets/styles/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/styles/component.css" />
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet'>
 </head>
 <body>
     <header >
-        <h1 class="jiterry">☠️ Bienvenido al castillo <span class="drag"> 🏰 </span> Dracula...</h1>      
+        <h1 class="jiterry">☠️ Bienvenido al castillo <span class="drag"> 🧛 </span> Dracula...</h1>
         <p class="jiterry">temblaras de miedo.</p>
-    </header>      
+    </header>
 
     <section>
-        <button class="md-trigger" data-modal="modal-4">¿Quieres Jugar?</button>
+        <div class="boton">
+            <button class="md-trigger" data-modal="modal-4"><strong>¿Vamos a Jugar?</strong></button>
+        </div>
+
         <div class="md-modal md-effect-4" id="modal-4">
             <div class="md-content">
-                <h3>Modal Dialog</h3>
+                <h3>Aqui llovera sangre...</h3>
                 <div>
-                    <p>This is a modal window. You can do the following things with it:</p>
+                    <p><strong>Selecciona tipo de Juego </strong></p>
                     <ul>
-                        <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                        <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                        <li><strong>Close:</strong> click on the button below to close the modal.</li>
+                        <li><strong>Opcion VS maquina:</strong> </li>
+                        <li><strong>Opcion Face to Face:</strong> </li>
                     </ul>
                     <button class="md-close">Close me!</button>
                 </div>
             </div>
         </div>
         <div class="md-overlay"></div><!-- the overlay element -->
-        
-    </section> 
-    
+
+    </section>
+
     <!-- <button onclick="juego(0);">Piedra</button>
     <button onclick="juego(1);">Papel</button>
     <button onclick="juego(2);">Tijeras</button>
@@ -47,8 +48,8 @@
     <!-- classie.js by @desandro: https://github.com/desandro/classie -->
 	<script src="assets/js/classie.js"></script>
     <script src="assets/js/modalEffects.js"></script>
-      
-	
+
+
 
 
 </body>

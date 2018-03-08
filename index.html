@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Juego Piedra Papel o Tijeras, Lagarto, Spock</title>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/component.css" />
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <h1>☠️ Bienvenido al castillo <span class="drag"> 🧛 </span> Dracula..</h1>
-
-    </header>
-
-    <button class="md-trigger" data-modal="modal-12">Jugar ahora...</button>
+    <header >
+        <h1 class="jiterry">☠️ Bienvenido al castillo <span class="drag"> 🏰 </span> Dracula...</h1>      
+        <p class="jiterry">temblaras de miedo.</p>
+    </header>      
 
     <section>
-        <div class="md-modal md-effect-12" id="modal-12">
+        <button class="md-trigger" data-modal="modal-4">¿Quieres Jugar?</button>
+        <div class="md-modal md-effect-4" id="modal-4">
             <div class="md-content">
                 <h3>Modal Dialog</h3>
                 <div>
@@ -31,10 +31,10 @@
                 </div>
             </div>
         </div>
-    </section>
-
-
-
+        <div class="md-overlay"></div><!-- the overlay element -->
+        
+    </section> 
+    
     <!-- <button onclick="juego(0);">Piedra</button>
     <button onclick="juego(1);">Papel</button>
     <button onclick="juego(2);">Tijeras</button>
@@ -45,8 +45,10 @@
 
     <script src="assets/js/scripts.js"></script>
     <!-- classie.js by @desandro: https://github.com/desandro/classie -->
-		<script src="assets/js/classie.js"></script>
-		<script src="assets/js/modalEffects.js"></script>
+	<script src="assets/js/classie.js"></script>
+    <script src="assets/js/modalEffects.js"></script>
+      
+	
 
 
 </body>

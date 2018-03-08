@@ -1,5 +1,4 @@
 
-
 // jugador vs maquina
 
 function juego(usuario1) {
@@ -45,7 +44,7 @@ function juego(usuario1) {
 // console.log(-+a++-+-+b--);
 
 
-// codigo jugador vs jugador.
+// codigo jugador vs jugador FaceToFace.
 
 var jugarFacetoFace = function(){
     confirm("¡Bienvenido, vamos a jugar!");
@@ -78,4 +77,7 @@ var jugarFacetoFace = function(){
         console.log("Fin del juego 😡");
     }
 };
+
+
+
 

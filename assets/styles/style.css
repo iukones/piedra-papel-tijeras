@@ -60,14 +60,18 @@ header p{
   display: inline-block;
   margin: 3px 2px;
   border-radius: 2px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.50);
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.50); */
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.28), 0 6px 20px 0 rgba(0, 0, 0, 0);
 }
 .jiterry:hover {
-  animation: jittery .3s ease-in-out infinite;
+  animation: jittery 200ms linear infinite;
 }
-
 @keyframes jittery {
-  10% {
+  50% {
+    transform: skewY(0.7deg) skewX(-0.7deg) scale(1.006);
+  }
+}
+  /* 10% {
     transform: translate3d(-2px, -3px, 0px) scale3d(1.01, 1.01, 0),
   }
   20% {
@@ -96,8 +100,8 @@ header p{
   }
   100% {
     transform: translate3d(3px, 1px, 0px) scale3d(.95, .95, 0);
-  }
-}
+  } */
+
 
 /* se integra el boxmodel */
 .md-modal {

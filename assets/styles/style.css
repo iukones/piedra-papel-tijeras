@@ -6,21 +6,12 @@ html * {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  cursor: url(../img/cursor-rockon.png), auto;
 
 }
 *, *::before, *::after{
   box-sizing: inherit;
 }
-/* html {
-    box-sizing: border-box;
-    font-size: 10px;
-    background-color: #BADA55;
-    background: url(../img/322616.jpg) no-repeat center fixed;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-  } */
 
 body {
     font-size: 1.6em;

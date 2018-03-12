@@ -1,41 +1,69 @@
 
-// jugador vs maquina
+// humano vs maquina
 
-function juego(usuario1) {
-    // console.log(usuario1);
+function jugarHvsM(humano) {
+    // console.log(humano);
 
+    // colocamos la variable con las opciones de personajes
     var opcionesElegibles = [
-        "Piedra",
-        "Papel",
-        "Tijeras",
-        "Lagarto",
-        "Spock"
+        "frankenstein",
+        "leia",
+        "padme",
+        "zombie",
+        "vampiro"
     ];
 
+    // aqui se configura una matriz con las opciones de juego para ambos jugadores.
     var opcionJugadas = [
-        [0,2,1,2,2],
-        [1,0,2,2,2],
+        [0,2,1,1,2],
+        [1,0,2,2,1],
         [2,1,0,2,2],
-        [1,1,1,0,2],
-        [1,1,1,1,0]
+        [2,1,1,0,2],
+        [1,2,1,1,0]
     ];
-    // console.log("usuario1 escogio: " + opcionesElegibles[usuario1]);
+    // console.log("humano escogio: " + opcionJugadas[humano]);
+
+    // descripcion jugadas
+    var descripcionJugada = [
+        ['Esto es empate','leia cubre frankenstein','frankenstein rompe padme','frankenstein descalabra zombie','vampiro vaporiza a frankenstein'],
+        ['leia cubre frankenstein','Esto es empate','padme cortan leia','zombie devora leia','leia desautoriza a vampiro'],
+        ['frankenstein rompe padme','padme cortan leia','Esto es empate','zombie devora padme','vampiro vaporiza padme'],
+        ['frankenstein descalabra zombie','zombie devora leia','zombie devora padme','Esto es empate','vampiro vaporiza zombie'],
+        ['vampiro vaporiza a frankenstein','leia desautoriza a vampiro','vampiro vaporiza padme','vampiro vaporiza zombie','Esto es empate']
+    ];
 
     var resultadoTexto = [
-        "¡Empataste 🤒!",
-        "¡Ups Perdiste 😡!",
-        "¡Woow Ganaste 💪!"
+        "¡nadie gana!",
+        "¡has perdido!",
+        "¡Excelente has Ganado!"
     ];
 
-    var usuario2 = Math.floor((Math.random() * 5));
-    // console.log("usuario2 escogio: " + usuario2);
+    var maquina = Math.floor((Math.random() * 5));
+    // console.log("maquina escogio: " + maquina);
+    var resutadoFinal = opcionJugadas[maquina][humano];
+    // console.log("maquina escogio: " + opcionJugadas[maquina]);
 
-    var resutadoFinal = opcionJugadas[usuario2][usuario1];
 
     // console.log(resutadoFinal);
-    console.log("Usuario 1 escoge: " + opcionesElegibles[usuario1]);
-    console.log("Usuario 2 escoge: " + opcionesElegibles[usuario2]);
+    console.log("Tu escogiste: " + opcionesElegibles[humano]);
+    console.log("Maquina escogiste: " + opcionesElegibles[maquina]);
+    console.log(descripcionJugada[maquina][humano]);
     console.log(resultadoTexto[resutadoFinal]);
+
+    var voz1;
+    var voz2;
+    var voz3;
+    var voz4;
+
+    voz1 = new SpeechSynthesisUtterance("Tu escogiste: " + opcionesElegibles[humano]);
+    voz2 = new SpeechSynthesisUtterance("Maquina escogiste: " + opcionesElegibles[maquina]);
+    voz3 = new SpeechSynthesisUtterance(descripcionJugada[maquina][humano]);
+    voz4 = new SpeechSynthesisUtterance(resultadoTexto[resutadoFinal]);
+
+    window.speechSynthesis.speak(voz1);
+    window.speechSynthesis.speak(voz2);
+    window.speechSynthesis.speak(voz3);
+    window.speechSynthesis.speak(voz4);
 
 }
 
@@ -79,5 +107,12 @@ var jugarFacetoFace = function(){
 };
 
 
-
+function playclip() {
+    var sonido = document.getElementById("myAudio");
+    sonido.play();
+}
+function pauseclip() {
+    var sonido = document.getElementById("myAudio");
+    sonido.pause();
+}
 

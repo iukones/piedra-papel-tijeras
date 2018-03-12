@@ -1,27 +1,40 @@
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+/* html {
     box-sizing: border-box;
     font-size: 10px;
-    /* background: #ffc600; */
     background-color: #BADA55;
     background: url(../img/322616.jpg) no-repeat center fixed;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     overflow: hidden;
-  }
+  } */
 
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
-  body {
-    padding: 0;
-    margin:0;
+body {
+    font-size: 1.6em;
+    /* padding: 0; */
+    /* margin:0; */
     font-family: 'Amatic SC', cursive;
-  }
+    background: url(../img/322616.jpg) no-repeat center fixed;
+    background-size: cover;
+    background-color: #333;
+    background-attachment: fixed;
+    background-position: center;
+}
 
-  h1{
+h1{
     text-align: center;
     font-size: 12rem;
     line-height:1;
@@ -47,7 +60,7 @@ header p{
   text-align: center;
   margin-top: 40px;
 }
-.boton button {
+.boton button{
   border: none;
   padding: 0.6em 1.2em;
   background: #e74c3c;
@@ -62,6 +75,9 @@ header p{
   border-radius: 2px;
   /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.50); */
   box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.28), 0 6px 20px 0 rgba(0, 0, 0, 0);
+}
+.boton button:hover {
+  background: #A5281B;
 }
 .jiterry:hover {
   animation: jittery 200ms linear infinite;
@@ -192,7 +208,7 @@ header p{
 }
 
 .md-content button {
-	display: block;
+	/* display: block; */
 	margin: 0 auto;
 	font-size: 0.8em;
 	margin-top: 10px;
@@ -205,6 +221,53 @@ header p{
 	height:  150px;
 	/*border: 1px solid #00A8E6;*/
 	border-radius: 3px 3px 3px 3px;
+}
+.btn a,
+.btn2 a{
+  text-decoration: none;
+  color: #fff;
+}
+nav ul li{
+  list-style: none;
+}
+.btn{
+  border: none;
+  padding: 0.6em 1.2em;
+  background: #c0392b;
+  color: #fff;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: block;
+  margin: 3px 2px;
+  border-radius: 2px;
+}
+.btn:hover,
+.btn2:hover {
+  background: #A5281B;
+}
+
+.btn2{
+  border: none;
+  padding: 0.2em 1em;
+  background: #c0392b;
+  color: #fff;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  /* text-transform: uppercase; */
+  cursor: pointer;
+  /* display: block; */
+  margin: 3px 2px;
+  border-radius: 2px;
+}
+input[type=button]{
+  width: 150px;
+  height: 140px;
+  opacity: 0;
+  cursor: pointer;
 }
 
 /* Individual modal styles with animations/transitions */
@@ -238,161 +301,175 @@ header p{
 }
 
 /* estilos personajes */
-
+.main {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  /* padding: 50px 0; */
+}
+.main > h1 {
+  text-align: center;
+  margin: 50px 0 90px 0;
+  font-size: 4em;
+}
+@media only screen and (min-width: 1024px) {
+  .main {
+    padding-top: 0px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .main {
+    max-width: none;
+    padding: 120px 0 50px;
+  }
+  .main > h1 {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    height: 80px;
+    line-height: 80px;
+    width: 400px;
+    margin: 0 0 0 -200px;
+    font-size: 2.6rem;
+    z-index: 20;
+  }
+}
 .entry {
   text-align: center;
-  min-height: 400px;
+  min-height: 173px;
   position: relative;
+  max-width: 160px;
+  margin-left: 40px;
+  /* text-align: center;
+  min-height: 608px;
+  position: relative;
+  max-width: 273px; */
+  /* text-align: center;
+  min-height: 316px;
+  position: relative; */
 }
 .entry div {
   position: absolute;
   left: 50%;
   top: 50%;
 }
-
-#mike-wazowski {
-  /* background:rgba(255,255,255,0.2); */
-}
 @media (min-width: 960px) {
   .entry {
     float: left;
-    width: 50%;
+    width: 33.333%;
   }
 }
-
-
-#mike-wazowski div {
-  width: 150px;
-  height: 90px;
-  margin-left: -75px;
-  margin-top: -155px;
-  background: transparent;
-  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
-  -webkit-box-shadow: 0 30px 3px 1px #ffe4c4, 0 18px 0 4px #555;
-  box-shadow: 0 30px 3px 1px #ffe4c4, 0 18px 0 4px #555;
-}
-
-#mike-wazowski div:before {
-  width: 200px;
-  height: 220px;
-  margin-left: -100px;
-  top: 45px;
-  left: 50%;
-  background-color: #9acd32;
-  background-image: radial-gradient(circle,white 50%,transparent 50%),radial-gradient(circle,#444 50%,transparent 50%),radial-gradient(circle,#20b2aa 30%,rgba(34,139,34,0) 80%),radial-gradient(circle,#444 50%,transparent 50%),radial-gradient(ellipse,white 35%,#ddd 60%,transparent 60%),radial-gradient(ellipse,#333 45%,#9acd32 55%,#9acd32 60%,transparent 60%),radial-gradient(ellipse,rgba(34,139,34,0.9) 45%,#9acd32 55%,#9acd32 60%,transparent 60%),radial-gradient(ellipse,#9acd32 55%,rgba(34,139,34,0.5) 56%,rgba(34,139,34,0) 63%),radial-gradient(circle,rgba(34,139,34,0) 30%,rgba(34,139,34,0.6) 60%);
-  background-repeat: no-repeat;
-  background-size: 8px 8px,20px 20px,25px 25px,50px 50px,110px 95px,120px 110px,130px 110px,115px 95px,250px 260px;
-  background-position: 53% 57px,center 59px,49% 59px,center 45px,center 25px,center 13px,center -2px,center 35px,0 -40px;
-  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
-}
 .entry div:before, .entry div:after {
   display: block;
   content: '';
   position: absolute;
 }
-
-#mike-wazowski div:after {
+/* primer personaje */
+#leia-organa{
+  background: rgba(255,255,255,0.2);
+}
+#leia-organa div {
+  width: 140px;
+  height: 110px;
+  margin-left: -70px;
+  margin-top: -55px;
+  background-color: #80ffff;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(ellipse at 50% 80%,transparent 50%,rgba(0,0,0,0.2) 50%),-webkit-gradient(linear,left top, right top,from(#ffe4c4),to(#ffe4c4)),radial-gradient(ellipse,#8b4513 50%,transparent 50%),radial-gradient(ellipse,#8b4513 50%,transparent 50%),radial-gradient(ellipse,#8b4513 50%,transparent 50%),-webkit-gradient(linear,left top, right top,from(rgba(0,0,0,0.3)),to(rgba(0,0,0,0.3)));
+  background-image: radial-gradient(ellipse at 50% 80%,transparent 50%,rgba(0,0,0,0.2) 50%),linear-gradient(to right,#ffe4c4,#ffe4c4),radial-gradient(ellipse,#8b4513 50%,transparent 50%),radial-gradient(ellipse,#8b4513 50%,transparent 50%),radial-gradient(ellipse,#8b4513 50%,transparent 50%),linear-gradient(to right,rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+  background-size: 100% 100%,2px 25px,76% 90%,44px 80px,44px 80px,100% 100%;
+  background-position: 0 0,50% 10px,50% -25%,3% 90%,97% 90%,0 0;
+  border-top-left-radius: 110px;
+  border-top-right-radius: 110px;
+  border-bottom-left-radius: 30px 50px;
+  border-bottom-right-radius: 30px 50px;
+  -webkit-box-shadow: inset 0 6px 0 10px #80ffff, 0 0 60px 10px #0ff;
+  box-shadow: inset 0 6px 0 10px #80ffff, 0 0 60px 10px #0ff;
+}
+#leia-organa div:before {
   width: 70px;
-  height: 40px;
-  margin-left: -35px;
+  height: 80px;
   left: 50%;
-  top: 185px;
-  background: #444;
-  background-image: radial-gradient(ellipse,white 50%,transparent 50%),radial-gradient(ellipse,white 50%,transparent 50%),radial-gradient(ellipse,white 50%,transparent 50%),radial-gradient(ellipse,white 50%,transparent 50%),radial-gradient(ellipse,rgba(255,255,255,0.2) 50%,transparent 50%);
+  top: 34px;
+  margin-left: -35px;
+  background-color: #ffe4c4;
   background-repeat: no-repeat;
-  background-size: 25px 18px,25px 18px,25px 18px,25px 18px,56px 30px;
-  background-position: -5px 30px,15px 32px,35px 32px,55px 28px,center 20px;
-  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
-  -webkit-box-shadow: 0 6px 0 #9acd32, 0 15px 3px -4px rgba(34,139,34,0.9);
-  box-shadow: 0 6px 0 #9acd32, 0 15px 3px -4px rgba(34,139,34,0.9);
-}
-
-.entry div:before, .entry div:after {
-  display: block;
-  content: '';
-  position: absolute;
+  background-image: radial-gradient(circle,rgba(255,255,255,0.6) 50%,transparent 50%),radial-gradient(circle,#7d3e11 50%,transparent 50%),radial-gradient(circle,rgba(255,255,255,0.6) 50%,transparent 50%),radial-gradient(circle,#7d3e11 50%,transparent 50%),radial-gradient(ellipse at 50% 120%,#e9967a 50%,transparent 50%),radial-gradient(ellipse at 50% 120%,#e9967a 50%,transparent 50%),radial-gradient(ellipse at 50% -20%,#e9967a 50%,transparent 50%);
+  background-size: 4px 4px,14px 14px,4px 4px,14px 14px,15px 7px,15px 7px,18px 7px;
+  background-position: 13px 33px,10px 30px,49px 33px,46px 30px,23px 55px,32px 55px,50% 62px;
+  border-top-left-radius: 110px 80px;
+  border-top-right-radius: 110px 80px;
+  border-bottom-left-radius: 110px;
+  border-bottom-right-radius: 110px;
+  -webkit-box-shadow: inset 7px 0 0 rgba(0,0,0,0.1), inset -7px 0 0 rgba(0,0,0,0.1), -5px 0 0 rgba(0,0,0,0.1), 5px 0 0 rgba(0,0,0,0.1);
+  box-shadow: inset 7px 0 0 rgba(0,0,0,0.1), inset -7px 0 0 rgba(0,0,0,0.1), -5px 0 0 rgba(0,0,0,0.1), 5px 0 0 rgba(0,0,0,0.1);
 }
 
 /* segundo personaje */
-#sully {
-  background:rgba(255,255,255,0.2);
+#padme-amidala{
+  background: rgba(255,255,255,0.2);
 }
-@media (min-width: 960px) {
-  .entry {
-  float: left;
-  width: 50%;
-}
-}
-/* .entry {
-  text-align: center;
-  min-height: 400px;
-  position: relative;
-} */
-
-#sully div {
-  width: 160px;
-  height: 62px;
-  margin-left: -80px;
-  margin-top: -150px;
-  background: transparent;
-  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
-  -webkit-box-shadow: 0 7px 7px 3px #ffe4c4, 0 15px 0 10px rgba(0,0,0,0.25), 0 15px 0 10px #ffe4c4;
-  box-shadow: 0 7px 7px 3px #ffe4c4, 0 15px 0 10px rgba(0,0,0,0.25), 0 15px 0 10px #ffe4c4;
-}
-/* .entry div {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-} */
-
-#sully div:before {
-  width: 180px;
-  height: 230px;
-  margin-left: -90px;
-  top: 30px;
-  left: 50%;
-  background-color: #00ced1;
-  background-image: radial-gradient(ellipse,rgba(0,0,0,0.4) 50%,transparent 50%),radial-gradient(ellipse,rgba(0,0,0,0.4) 50%,transparent 50%),radial-gradient(ellipse,#00696b 50%,transparent 50%),radial-gradient(circle,white 50%,transparent 50%),radial-gradient(circle,#444 50%,transparent 50%),radial-gradient(circle,#9370db 30%,rgba(147,112,219,0) 70%),radial-gradient(circle,#444 50%,transparent 50%),radial-gradient(ellipse,white 30%,#ddd 60%,transparent 60%),radial-gradient(ellipse,#333 45%,#48d1cc 55%,#48d1cc 60%,transparent 60%),radial-gradient(circle,white 50%,transparent 50%),radial-gradient(circle,#444 50%,transparent 50%),radial-gradient(circle,#9370db 30%,rgba(147,112,219,0) 70%),radial-gradient(circle,#444 50%,transparent 50%),radial-gradient(ellipse,white 30%,#ddd 60%,transparent 60%),radial-gradient(ellipse,#333 45%,#48d1cc 55%,#48d1cc 60%,transparent 60%),radial-gradient(ellipse,#00abad 40%,rgba(0,206,209,0) 50%),radial-gradient(ellipse,#009c9e 40%,rgba(0,206,209,0) 50%),radial-gradient(ellipse,#9370db 30%,rgba(147,112,219,0) 60%),radial-gradient(ellipse,#9370db 30%,rgba(147,112,219,0) 60%),radial-gradient(circle,rgba(0,206,209,0) 35%,#009c9e 65%);
+#padme-amidala div {
+  width: 150px;
+  height: 120px;
+  margin-left: -75px;
+  margin-top: -60px;
+  background-color: #53290b;
   background-repeat: no-repeat;
-  background-size: 20px 10px,20px 10px,75px 40px,5px 5px,13px 13px,19px 19px,34px 34px,50px 45px,54px 58px,5px 5px,13px 13px,19px 19px,34px 34px,50px 45px,54px 58px,100px 40px,170px 90px,45px 40px,45px 40px,220px 350px;
-  background-position: 70px 118px,90px 118px,center 95px,68px 70px,60px 71px,58px 68px,50px 60px,40px 55px,38px 47px,114px 70px,106px 71px,102px 68px,95px 60px,90px 55px,88px 47px,center 90px,center 30px,50px -17px,95px 10px,0 -80px;
-  border-radius: 50% 50% 50% 50%/60% 60% 30% 30%;
-  -webkit-box-shadow: 0 0 20px #009c9e, 0 10px 10px #008384, inset 0 -15px 0 13px rgba(0,0,0,0.03);
-  box-shadow: 0 0 20px #009c9e, 0 10px 10px #008384, inset 0 -15px 0 13px rgba(0,0,0,0.03);
+  background-image: linear-gradient(to right,#c61236,#c61236),linear-gradient(115deg,transparent 40%,#daa520 40%),linear-gradient(-115deg,transparent 40%,#daa520 40%),radial-gradient(ellipse,#daa520 50%,transparent 50%),linear-gradient(to top,#53290b 45%,transparent 45%),radial-gradient(ellipse,transparent 54%,#a0522d 54%,#a0522d 60%,transparent 60%);
+  background-size: 12px 50%,25% 50%,25% 50%,105% 80%,100% 100%,100% 105%;
+  background-position: 50% 0,33% 0,68% 0,50% 130%,0 0,0 0;
+  border-top-left-radius: 110px;
+  border-top-right-radius: 110px;
+  border-bottom-left-radius: 110px 70px;
+  border-bottom-right-radius: 110px 70px;
+  -webkit-box-shadow: inset 6px -8px 0 rgba(0,0,0,0.3), inset -6px -8px 0 rgba(0,0,0,0.3);
+  box-shadow: inset 6px -8px 0 rgba(0,0,0,0.3), inset -6px -8px 0 rgba(0,0,0,0.3);
 }
-
-#sully div:after {
+#padme-amidala div:before {
   width: 70px;
-  height: 15px;
-  margin-left: -35px;
+  height: 80px;
   left: 50%;
-  top: 180px;
-  background: #444;
-  background-image: radial-gradient(ellipse,white 50%,transparent 50%),radial-gradient(ellipse,white 50%,transparent 50%),radial-gradient(ellipse,white 50%,transparent 50%),radial-gradient(ellipse,white 50%,transparent 50%),radial-gradient(ellipse,white 50%,transparent 50%),radial-gradient(ellipse,white 50%,transparent 50%);
+  top: 44px;
+  margin-left: -35px;
+  background-color: #fff0f5;
   background-repeat: no-repeat;
-  background-size: 16px 25px;
-  background-position: -5px 7px,7px 4px,19px 7px,31px 7px,43px 4px,55px 7px;
-  border-radius: 60% 60% 40% 40%/50% 50% 50% 50%;
-  -webkit-box-shadow: 0 6px 0 #48d1cc, 0 15px 3px -4px #009c9e, 0 -106px 6px -2px rgba(255,255,255,0.2), -20px -114px 6px 7px #00abad, 20px -114px 6px 7px #00abad, -20px -105px 5px 5px rgba(0,0,0,0.15), 20px -105px 5px 5px rgba(0,0,0,0.15);
-  box-shadow: 0 6px 0 #48d1cc, 0 15px 3px -4px #009c9e, 0 -106px 6px -2px rgba(255,255,255,0.2), -20px -114px 6px 7px #00abad, 20px -114px 6px 7px #00abad, -20px -105px 5px 5px rgba(0,0,0,0.15), 20px -105px 5px 5px rgba(0,0,0,0.15);
+  background-image: radial-gradient(circle,rgba(255,255,255,0.5) 50%,transparent 50%),radial-gradient(circle,#b01030 35%,#daa520 35%,#daa520 50%,transparent 50%),radial-gradient(circle,rgba(0,0,0,0.1) 50%,transparent 50%),-webkit-gradient(linear,left top, right top,from(#c61236),to(#c61236)),radial-gradient(circle,rgba(255,255,255,0.6) 50%,transparent 50%),radial-gradient(circle,#703920 50%,transparent 50%),radial-gradient(circle,rgba(255,255,255,0.6) 50%,transparent 50%),radial-gradient(circle,#703920 50%,transparent 50%),radial-gradient(circle,#dc143c 50%,transparent 50%),radial-gradient(circle,#dc143c 50%,transparent 50%),radial-gradient(ellipse at 50% 120%,#dc143c 50%,transparent 50%),radial-gradient(ellipse at 50% 120%,#dc143c 50%,transparent 50%),-webkit-gradient(linear,left top, right top,from(#dc143c),to(#dc143c));
+  background-image: radial-gradient(circle,rgba(255,255,255,0.5) 50%,transparent 50%),radial-gradient(circle,#b01030 35%,#daa520 35%,#daa520 50%,transparent 50%),radial-gradient(circle,rgba(0,0,0,0.1) 50%,transparent 50%),linear-gradient(to right,#c61236,#c61236),radial-gradient(circle,rgba(255,255,255,0.6) 50%,transparent 50%),radial-gradient(circle,#703920 50%,transparent 50%),radial-gradient(circle,rgba(255,255,255,0.6) 50%,transparent 50%),radial-gradient(circle,#703920 50%,transparent 50%),radial-gradient(circle,#dc143c 50%,transparent 50%),radial-gradient(circle,#dc143c 50%,transparent 50%),radial-gradient(ellipse at 50% 120%,#dc143c 50%,transparent 50%),radial-gradient(ellipse at 50% 120%,#dc143c 50%,transparent 50%),linear-gradient(to right,#dc143c,#dc143c);
+  background-size: 8px 8px,24px 24px,24px 24px,12px 10px,4px 4px,14px 14px,4px 4px,14px 14px,6px 6px,6px 6px,15px 7px,15px 7px,6px 6px;
+  background-position: 47% 10px,50% 3px,57% 5px,50% 0,13px 33px,10px 30px,49px 33px,46px 30px,14px 48px,51px 48px,23px 55px,32px 55px,50% 61px;
+  border-top-left-radius: 110px 80px;
+  border-top-right-radius: 110px 80px;
+  border-bottom-left-radius: 110px;
+  border-bottom-right-radius: 110px;
+  -webkit-box-shadow: inset 7px 0 0 rgba(0,0,0,0.15), inset -7px 0 0 rgba(0,0,0,0.15), -5px 0 0 rgba(0,0,0,0.1), 5px 0 0 rgba(0,0,0,0.1), 0 -10px 0 12px rgba(0,0,0,0.1);
+  box-shadow: inset 7px 0 0 rgba(0,0,0,0.15), inset -7px 0 0 rgba(0,0,0,0.15), -5px 0 0 rgba(0,0,0,0.1), 5px 0 0 rgba(0,0,0,0.1), 0 -10px 0 12px rgba(0,0,0,0.1);
 }
-
+#padme-amidala div:after {
+  width: 90px;
+  height: 150px;
+  left: 50%;
+  top: -10px;
+  margin-left: -45px;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(ellipse at center 120%,#daa520 50%,transparent 50%);
+  background-size: 13px 13px;
+  background-position: 50% -4px;
+  border-radius: 10% 10% 70% 70%;
+  -webkit-box-shadow: inset 10px 5px 0 -5px #daa520, inset 15px 5px 0 -5px #b01030, inset -10px 5px 0 -5px #daa520, inset -15px 5px 0 -5px #b01030;
+  box-shadow: inset 10px 5px 0 -5px #daa520, inset 15px 5px 0 -5px #b01030, inset -10px 5px 0 -5px #daa520, inset -15px 5px 0 -5px #b01030;
+}
 /* tercer personaje frankenstein*/
 
 #frankenstein {
   background:rgba(255,255,255,0.2);
+  /* border-top: 1px solid #ff6347; */
+
 }
 @media (min-width: 960px){
   .entry.threes {
     width: 33.333%;
   }
-}
-@media (min-width: 960px){
-  .entry {
-    float: left;
-    width: 50%;
-  }
-
 }
 #frankenstein div {
   width: 130px;
@@ -431,20 +508,14 @@ header p{
 /* cuarto personaje zombie*/
 
 #zombie {
-  /* background: #555; */
-  border: 1px solid #ff6347;
+  background: rgba(255,255,255,0.2);
 }
 @media (min-width: 960px){
   .entry.threes {
     width: 33.333%;
   }
 }
-@media (min-width: 960px){
-  .entry {
-    float: left;
-    width: 50%;
-  }
-}
+
 #zombie div {
   width: 130px;
   height: 160px;
@@ -485,22 +556,15 @@ header p{
 
 /* quinto personaje vampire*/
 #vampire {
-  /* background: #444; */
-  border: 1px solid #ff6347;
+  background:rgba(255,255,255,0.2);
+  /* border-top: 1px solid #ff6347; */
+  /* border-left: 1px solid #ff6347; */
 }
 @media (min-width: 960px){
   .entry.threes {
     width: 33.333%;
   }
 }
-
-@media (min-width: 960px){
-  .entry {
-    float: left;
-    width: 50%;
-  }
-}
-
 #vampire div {
   width: 130px;
   height: 160px;

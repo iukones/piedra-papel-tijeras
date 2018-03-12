@@ -7,13 +7,13 @@ function jugarHvsM(humano) {
     // colocamos la variable con las opciones de personajes
     var opcionesElegibles = [
         "frankenstein",
-        "leia",
-        "padme",
-        "zombie",
-        "vampiro"
+        "leia Organa",
+        "padmé amidala",
+        "zombi",
+        "drácula"
     ];
 
-    // aqui se configura una matriz con las opciones de juego para ambos jugadores.
+    // aqui se configura una matriz con las opciones de juego para ambos jugadores 0-empate, 1-pierdes, 2-ganas.
     var opcionJugadas = [
         [0,2,1,1,2],
         [1,0,2,2,1],
@@ -25,17 +25,17 @@ function jugarHvsM(humano) {
 
     // descripcion jugadas
     var descripcionJugada = [
-        ['Esto es empate','leia cubre frankenstein','frankenstein rompe padme','frankenstein descalabra zombie','vampiro vaporiza a frankenstein'],
-        ['leia cubre frankenstein','Esto es empate','padme cortan leia','zombie devora leia','leia desautoriza a vampiro'],
-        ['frankenstein rompe padme','padme cortan leia','Esto es empate','zombie devora padme','vampiro vaporiza padme'],
-        ['frankenstein descalabra zombie','zombie devora leia','zombie devora padme','Esto es empate','vampiro vaporiza zombie'],
-        ['vampiro vaporiza a frankenstein','leia desautoriza a vampiro','vampiro vaporiza padme','vampiro vaporiza zombie','Esto es empate']
+        ['Esto es empate','leia Organa cubre a frankenstein','frankenstein aplasta a padmé amidala','frankenstein aplasta zombi','drácula vaporiza a frankenstein'],
+        ['leia Organa cubre a frankenstein','Esto es empate','padmé amidala corta a leia Organa','zombi devora leia Organa','leia Organa desautoriza a drácula'],
+        ['frankenstein aplasta a padmé amidala','padmé amidala cortan leia Organa','Esto es empate','zombi devora padmé amidala','drácula vaporiza padmé amidala'],
+        ['frankenstein aplasta zombi','zombi devora leia Organa','zombi devora padmé amidala','Esto es empate','drácula vaporiza zombi'],
+        ['drácula vaporiza a frankenstein','leia Organa desautoriza a dracula','drácula vaporiza padmé amidala','drácula vaporiza zombi','Esto es empate']
     ];
 
     var resultadoTexto = [
-        "¡nadie gana!",
-        "¡has perdido!",
-        "¡Excelente has Ganado!"
+        "ninguno gana",
+        "lo siento, has perdido",
+        "¡Excelente, has Ganado!"
     ];
 
     var maquina = Math.floor((Math.random() * 5));
@@ -45,10 +45,10 @@ function jugarHvsM(humano) {
 
 
     // console.log(resutadoFinal);
-    console.log("Tu escogiste: " + opcionesElegibles[humano]);
-    console.log("Maquina escogiste: " + opcionesElegibles[maquina]);
-    console.log(descripcionJugada[maquina][humano]);
-    console.log(resultadoTexto[resutadoFinal]);
+    // console.log("Tu escogiste: " + opcionesElegibles[humano]);
+    // console.log("Máquina escogió: " + opcionesElegibles[maquina]);
+    // console.log(descripcionJugada[maquina][humano]);
+    // console.log(resultadoTexto[resutadoFinal]);
 
     var voz1;
     var voz2;
@@ -56,7 +56,7 @@ function jugarHvsM(humano) {
     var voz4;
 
     voz1 = new SpeechSynthesisUtterance("Tu escogiste: " + opcionesElegibles[humano]);
-    voz2 = new SpeechSynthesisUtterance("Maquina escogiste: " + opcionesElegibles[maquina]);
+    voz2 = new SpeechSynthesisUtterance("Máquina escogió: " + opcionesElegibles[maquina]);
     voz3 = new SpeechSynthesisUtterance(descripcionJugada[maquina][humano]);
     voz4 = new SpeechSynthesisUtterance(resultadoTexto[resutadoFinal]);
 
